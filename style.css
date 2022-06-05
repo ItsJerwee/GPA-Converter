@@ -1,0 +1,78 @@
+body{
+    background: linear-gradient(to bottom right, #919cdf, #bd36df);
+    font-family: 'Dosis', sans-serif;   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 25em;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.header{
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 15px;
+    box-shadow: 0 10px 20px rgb(19, 1, 70), 0 6px 6px rgb(59, 0, 66);
+}
+
+#creator{
+    font-style: italic;
+}
+
+.section{
+    text-align: center;
+    padding: 20px 25px 20px 25px;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0 10px 20px rgb(88, 1, 77), 0 6px 6px rgb(100, 2, 95);
+}
+
+#methodType, #inputGrade1, #outputGPA1, #inputGrade2, #outputGPA2, #inputGrade3, #outputGPA3, #inputGrade4, #outputGPA4{
+    font-family: 'Dosis', sans-serif;  
+    font-weight: bold;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+#Bt1, #Bt2, #Bt3, #Bt4{
+    margin: 30px;
+    padding: 10px;
+    background: rgb(173, 44, 44);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Dosis', sans-serif;  
+    font-weight: bold;
+}
+
+#Bt1:active, #Bt2:active, #Bt3:active, #Bt4:active{
+    font-size: 30px;
+}
+
+#Bt1:hover, #Bt2:hover, #Bt3:hover, #Bt4:hover{
+    background:rgb(117, 38, 38);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.disclaimer{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 17px;
+    color: rgb(212, 0, 0);
+}
+

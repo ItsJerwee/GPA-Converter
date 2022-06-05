@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class = "container">
+        <header class = "header">
+            <h1>GPA Converter</h1>
+
+            <label>Choose a way to convert</label>
+            <select id = "methodType" onchange = "enableMethod(this)">
+            <option>Select</option>
+            <option value = "pG2Scale">Percent Grade -> 4.0 Scale</option>
+            <option value = "lG2Scale">Letter Grade -> 4.0 Scale</option>
+            <option value = "lG2Pg">Letter Grade -> Percent Grade</option>
+            <option value = "pG2Lg">Percent Grade -> Letter Grade</option>
+            </select>
+        </header>
+        
+
+        <p id = "creator" onmouseover= "changeText(this,'6-2022')" onmouseout="changeText(this,'J.L.')">J.L.</p>
+
+        <section class = "section">
+            <form id = "pGToScale">
+                <label id = "">Percent Grade:</label>
+                <input type = "number" id = "inputGrade1" placeholder = "Enter Grade" max = "100" required>
+                <button type = "button" onclick = "convert1()" id = "Bt1">Convert</button>
+                <div class = output1>
+                <label>4.0 Scale:</label>
+                <input type = "text" id = "outputGPA1" readonly>
+                </div>
+            </form>
+
+            <form id = "lGToScale">
+                <label id = "">Letter Grade:</label>
+                <input type = "text" id = "inputGrade2" placeholder = "Enter Grade" required>
+                <button type = "button" onclick = "convert2()" id = "Bt2">Convert</button>
+                <div class = output2>
+                <label>4.0 Scale:</label>
+                <input type = "text" id = "outputGPA2" readonly>
+                </div>
+            </form>
+
+            <form id = "lGToPg">
+                <label id = "">Letter Grade:</label>
+                <input type = "text" id = "inputGrade3" placeholder = "Enter Grade" required>
+                <button type = "button" onclick = "convert3()" id = "Bt3">Convert</button>
+                <div class = output3>
+                <label>Percent Grade:</label>
+                <input type = "text" id = "outputGPA3" readonly>
+                </div>
+            </form>
+
+            <form id = "pGToLg">
+                <label id = "">Percent Grade:</label>
+                <input type = "number" id = "inputGrade4" placeholder = "Enter Grade" max = "100" required>
+                <button type = "button" onclick = "convert4()" id = "Bt4">Convert</button>
+                <div class = "output4">
+                <label>Letter Grade:</label>
+                <input type = "text" id = "outputGPA4" readonly>
+                </div>
+            </form>
+        </section>
+
+        <a href = "https://bigfuture.collegeboard.org/plan-for-college/college-basics/how-to-convert-gpa-4.0-scale" target="_blank" style = text-decoration:none;><p class = "disclaimer">DISCLAIMER: This conversion from CollegeBoard is not used in every school</p></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
